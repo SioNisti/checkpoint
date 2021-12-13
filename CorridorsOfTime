@@ -4,7 +4,7 @@
 
 <head>
 <link rel="icon" href="image/barrel.gif" type="image/gif" />
-<title> Stickerbush Symphony </title>
+<title> Corridors of Time </title>
 </head>
 
 <style>
@@ -29,7 +29,7 @@ img {
 .loopscroll {
   height:1920px;
   width:2048px;
-  background-image:url(image/corridor_of_time_bg2.png);
+  background-image:url(image/corridors_of_time_bg2.png);
   image-rendering: pixelated;
   background-repeat:repeat-x;
   background-position:0 0;
@@ -77,7 +77,7 @@ image {
 
 <body class="loopscroll" onload="load()">
 
-<image id="brmbl" src="image/corridor_of_time_front.png" ondragstart="return false;">
+<image id="brmbl" src="image/corridors_of_time_front.png" ondragstart="return false;">
 
 <div id="div">
 </div>
@@ -88,7 +88,7 @@ image {
 function play() {
 	var audio;
 
-	audio = new Audio('audio/corridoroftime.mp3');
+	audio = new Audio('audio/corridorsoftime.mp3');
 	audio.loop = true;
 	audio.play();
 	var x = document.getElementById("btn");
