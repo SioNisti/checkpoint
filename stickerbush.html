@@ -30,6 +30,7 @@ img {
   height:1920px;
   width:2048px;
   background-image:url(image/sky.png);
+  image-rendering: pixelated;
   background-repeat:repeat-x;
   background-position:0 0;
   background-size:2048px auto;
@@ -67,6 +68,9 @@ button {
 }
 image:hover {
 	cursor: none;
+ }
+image {
+	image-rendering: pixelated;
 }
 </style>
 
@@ -85,21 +89,19 @@ function play() {
 	var x = randomIntFromInterval(1, 2500);
 	var audio;
 	
-	if (x == 4){
+	if (x == 4) {
 		audio = new Audio('audio/DrambleBlasters.mp3');
 		document.title = "Dramble Blasters";
 		document.body.style.backgroundImage = "url('image/sky2.png')";
 		document.getElementById('brmbl').src='image/bramble2.png';
-		
-	}else{
+	} else {
 		audio = new Audio('audio/StickerbushSymphony.mp3');
-		
 	}
 	
 	audio.loop = true;
 	audio.play();
-    var x = document.getElementById("btn");
-    x.style.display = "none";
+	var x = document.getElementById("btn");
+	x.style.display = "none";
 }
 
 function randomIntFromInterval(min, max) {
