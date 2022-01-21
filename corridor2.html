@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang=en-US>
+<meta charset="UTF-8"><html>
+
+<head>
+<link rel="icon" href="image/barrel.gif" type="image/gif" />
+<title> Corridors of Time </title>
+</head>
+
+<style>
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  margin: 0px;
+  padding 0px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+img {
+  display: block;
+  padding:0;
+  margin:0;
+}
+.loopscroll {
+  height:1080px;
+  width:1920px;
+  background-image:url(image/corridors_of_time_bg.png);
+  image-rendering: pixelated;
+  background-repeat:repeat-x;
+  background-position:0 0;
+  background-size:1920px auto;
+  animation-name:backgroundloop;
+  animation-iteration-count:infinite;
+  animation-duration:26s;
+  animation-timing-function:linear;
+}
+@keyframes backgroundloop {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position:-512px 0;
+  }
+}
+.div {
+	position: relative;
+}
+button {
+	width: 100%;
+	height: 100%;
+	font-size: 72px;
+	background-color: black;
+	color: white;
+	border: 0px none;
+}
+button:hover {
+	cursor: pointer;
+	background-color: rgba(5,5,5);
+}
+button {
+	position: absolute;
+	z-index: 10;
+}
+image:hover {
+	cursor: none;
+ }
+image {
+	image-rendering: pixelated;
+  	height:1080px;
+  	width:1920px;
+}
+</style>
+
+<body class="loopscroll">
+
+<image id="brmbl" src="image/corridors_of_time_front.png" ondragstart="return false;">
+
+</body>
+<script>
+$("body").on("contextmenu",function(e){
+     return false;
+});
+</script>
+</html>
